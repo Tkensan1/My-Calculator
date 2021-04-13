@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="inoue_300292889_lab.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <h1>JavaScript Arithmetic Operator</h1>
+    
+    <form method="get" action="">
+      
+      <fieldset>
+        <legend>My Calculator</legend>
+        
+        <textarea name="resultarea" id="resultArea" cols="40" rows="6"></textarea>
+      </fieldset>
+  
+      
+      <fieldset>
+        <legend>Input</legend>
+        
+        <label for="operands">Operands:</label>
+        
+        <input type="number" name="firstoperand" id="firstOperand">
+        <input type="number" name="secondoperand" id="secondOperand">
+        <br><br>
+        <label for="operator">Operator:</label>
+        
+        <button id="addition">+</button>
+        <button id="multiplication">&times;</button>
+        <button id="division">:</button>
+        
+        <input type="reset" value="clear" id="clr">
+      </fieldset>
+    </form>
+  
+    
+    <script>
+      
+      document.getElementById("addition").addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        
+        let firstOperandValue = document.getElementById("firstOperand").value;
+        
+        let secondOperandValue = document.getElementById("secondOperand").value;
+  
+        
+        let sumValue = Number(firstOperandValue) + Number(secondOperandValue);
+  
+        
+        document.querySelector("textarea").value = `${firstOperandValue} + ${secondOperandValue} = ${sumValue}`;
+      });
+  
+      
+      document.getElementById("multiplication").addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        
+        let firstOperandValue = document.getElementById("firstOperand").value;
+        
+        let secondOperandValue = document.getElementById("secondOperand").value;
+  
+       
+        let multiplicationValue = firstOperandValue * secondOperandValue;
+  
+        
+        document.querySelector("textarea").value = `${firstOperandValue} * ${secondOperandValue} = ${multiplicationValue}`;
+      });
+  
+      
+      document.getElementById("division").addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        
+        let firstOperandValue = document.getElementById("firstOperand").value;
+        
+        let secondOperandValue = document.getElementById("secondOperand").value;
+  
+        
+        let divisionValue = firstOperandValue / secondOperandValue;
+  
+        
+        document.querySelector("textarea").value = `${firstOperandValue} / ${secondOperandValue} = ${divisionValue}`;
+      });
+    </script>
+  </body>
+  
+  </html>
+    

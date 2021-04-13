@@ -1,0 +1,29 @@
+fieldset {
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 400px;
+    background-color: lightsteelblue ;
+  }
+
+  legend {
+    background-color:slategray;
+    color: white;
+    font-weight: 400;
+    padding: 2px 8px;
+  }
+
+  #firstOperand, #secondOperand {
+    width: 110px;
+  }
+
+  button:first-of-type {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  button:not(first-of-type), #clr {
+    margin-left: 6px;
+    cursor: pointer;
+  }
+
+  
